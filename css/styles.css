@@ -5,14 +5,14 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh; /* Use min-height to account for smaller screens */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: #008080; /* Teal background */
     color: #ffffff; /* White font */
-    font-family: 'Poppins', sans-serif; /* Poppins font */
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Center everything vertically and horizontally */
@@ -21,12 +21,15 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    padding: 20px; /* Added padding for better spacing on small screens */
+    width: 100%; /* Full width for mobile */
+    box-sizing: border-box;
 }
 
 /* Add a grey shadow to the text */
 h1, p {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px; /* Added margin for better spacing */
 }
 
 /* Fade-in animation for headings */
@@ -36,7 +39,7 @@ h1, p {
 }
 
 p {
-    font-size: 20px;
+    font-size: 18px; /* Adjusted for smaller screens */
 }
 
 /* Fade-in animation for the form */
@@ -46,28 +49,17 @@ form {
     align-items: center;
     margin-top: 20px;
     width: 100%; /* Ensure the form fits within the container */
+    max-width: 400px; /* Limit the width on larger screens */
     opacity: 0; /* Initially hidden */
-    animation: fadeIn 2s ease-in-out 2s forwards; /* Delayed fade-in */
+    animation: fadeIn 2s ease-in-out 2s forwards;
 }
 
-/* Define fade-in animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Label and form field styling */
 label {
     display: block;
     width: 100%;
-    max-width: 300px; /* Constrain the form fields to a nice width */
-    margin-bottom: 10px; /* Space between labels */
+    margin-bottom: 10px;
     text-align: left;
-    color: #ffffff; /* White text for consistency */
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -78,7 +70,7 @@ input, textarea, input[type="file"] {
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-top: 5px;
-    box-sizing: border-box; /* Make sure padding doesn't affect the width */
+    box-sizing: border-box;
 }
 
 textarea {
@@ -89,7 +81,7 @@ textarea {
 button {
     padding: 10px 20px;
     width: 100%;
-    max-width: 300px; /* Make the button the same width as inputs */
+    max-width: 300px;
     background-color: #ffffff;
     color: #008080;
     border: none;
@@ -102,4 +94,42 @@ button {
 
 button:hover {
     background-color: #f0f0f0;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em; /* Scale down headings for smaller screens */
+    }
+
+    p {
+        font-size: 16px; /* Adjust paragraph text size */
+    }
+
+    input, textarea, input[type="file"], button {
+        font-size: 14px; /* Reduce form element font size */
+    }
+
+    button {
+        width: 100%; /* Ensure button takes up full width on small screens */
+        max-width: none;
+    }
+
+    .container {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    form {
+        max-width: none; /* Remove max-width constraint for smaller screens */
+    }
+}
+
+/* Define fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
