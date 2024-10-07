@@ -1,0 +1,84 @@
+/* Style the input and button */
+/* Import the Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #008080; /* Teal background */
+    color: #ffffff; /* White font */
+    font-family: 'Poppins', sans-serif; /* Poppins font */
+}
+
+/* Center everything vertically and horizontally */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Add a grey shadow to the text */
+h1, p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Fade-in animation for headings */
+h1, p {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 1s forwards;
+}
+p {
+    font-size: 20px;
+}
+/* Define fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #008080;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-shadow: none;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Message styling */
+#thank-you-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ffffff;
+}

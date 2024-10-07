@@ -3,10 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+    <title>Found Paddle</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is my simple GitHub page.</p>
+    <div class="container">
+        <h1>Hey, you found my paddle!</h1>
+        <h1>Thank you so much!</h1>
+        <p>I will happily pay you $50 if you return this to me!</p>
+        <p>If you kindly leave your phone, email or other contact method below,</p>
+        <p>I will reach out to you shortly.</p>
+
+        <!-- Contact form using Formspree -->
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="email" name="email" placeholder="Enter your email address" required>
+            <textarea name="message" placeholder="Leave a message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+        <p id="thank-you-message" style="display:none;">Thank you! I will get back to you soon.</p>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from actually submitting
+            document.getElementById('thank-you-message').style.display = 'block'; // Show thank you message
+            setTimeout(() => {
+                event.target.submit(); // Actually submit the form after showing thank you
+            }, 1000); // Delay submission by 1 second
+        });
+    </script>
 </body>
 </html>
