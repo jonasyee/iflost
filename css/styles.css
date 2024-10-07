@@ -133,3 +133,26 @@ button:hover {
         opacity: 1;
     }
 }
+/* Container for the specified text */
+.text-container {
+    max-width: 300px; /* Limit the width of the text container */
+    margin: 0 auto; /* Center the text container */
+    padding: 15px; /* Add padding for breathing space */
+    text-align: center; /* Keep text centered within the container */
+}
+
+/* Adjust font size for paragraphs */
+.text-container p {
+    font-size: 18px; /* You can adjust this size depending on preference */
+    margin-bottom: 10px; /* Add some space between paragraphs */
+}
+@media (max-width: 768px) {
+    .text-container {
+        max-width: 250px; /* Make the container slightly smaller on mobile */
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .text-container p {
+        font-size: 16px; /* Reduce font size slightly for mobile */
+    }
+}
