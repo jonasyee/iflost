@@ -42,20 +42,5 @@
 
         <p id="thank-you-message" style="display:none;">Thank you! I will get back to you soon.</p>
     </div>
-
-    <script>
-        document.querySelector('form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const form = event.target;
-            const submitButton = form.querySelector('button');
-
-            document.getElementById('thank-you-message').style.display = 'block';
-            submitButton.disabled = true;
-
-            setTimeout(() => {
-                form.submit();
-            }, 1000);
-        });
-    </script>
 </body>
 </html>
