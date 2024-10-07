@@ -1,56 +1,50 @@
-/* Import the Poppins font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-/* General styles */
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Use min-height to account for smaller screens */
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #008080; /* Teal background */
-    color: #ffffff; /* White font */
+    background-color: #008080;
+    color: #ffffff;
     font-family: 'Poppins', sans-serif;
 }
 
-/* Center everything vertically and horizontally */
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px; /* Added padding for better spacing on small screens */
-    width: 100%; /* Full width for mobile */
+    padding: 20px;
+    width: 100%;
     box-sizing: border-box;
 }
 
-/* Add a grey shadow to the text */
 h1, p {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    margin-bottom: 15px; /* Added margin for better spacing */
+    margin-bottom: 15px;
 }
 
-/* Fade-in animation for headings */
 h1, p {
     opacity: 0;
     animation: fadeIn 2s ease-in-out 1s forwards;
 }
 
 p {
-    font-size: 18px; /* Adjusted for smaller screens */
+    font-size: 18px;
 }
 
-/* Fade-in animation for the form */
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
-    width: 100%; /* Ensure the form fits within the container */
-    max-width: 400px; /* Limit the width on larger screens */
-    opacity: 0; /* Initially hidden */
+    width: 100%;
+    max-width: 400px;
+    opacity: 0;
     animation: fadeIn 2s ease-in-out 2s forwards;
 }
 
@@ -75,7 +69,7 @@ input, textarea, input[type="file"] {
 
 textarea {
     height: 100px;
-    resize: none; /* Disable resizing */
+    resize: none;
 }
 
 button {
@@ -96,35 +90,33 @@ button:hover {
     background-color: #f0f0f0;
 }
 
-/* Media query for mobile responsiveness */
 @media (max-width: 768px) {
     h1 {
-        font-size: 1.8em; /* Scale down headings for smaller screens */
+        font-size: 1.8em;
     }
 
     p {
-        font-size: 16px; /* Adjust paragraph text size */
+        font-size: 16px;
     }
 
     input, textarea, input[type="file"], button {
-        font-size: 14px; /* Reduce form element font size */
+        font-size: 14px;
     }
 
     button {
-        width: 100%; /* Ensure button takes up full width on small screens */
+        width: 100%;
         max-width: none;
     }
 
     .container {
-        padding: 10px; /* Reduce padding on smaller screens */
+        padding: 10px;
     }
 
     form {
-        max-width: none; /* Remove max-width constraint for smaller screens */
+        max-width: none;
     }
 }
 
-/* Define fade-in animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -133,26 +125,26 @@ button:hover {
         opacity: 1;
     }
 }
-/* Container for the specified text */
+
 .text-container {
-    max-width: 300px; /* Limit the width of the text container */
-    margin: 0 auto; /* Center the text container */
-    padding: 15px; /* Add padding for breathing space */
-    text-align: center; /* Keep text centered within the container */
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
 }
 
-/* Adjust font size for paragraphs */
 .text-container p {
-    font-size: 18px; /* You can adjust this size depending on preference */
-    margin-bottom: 10px; /* Add some space between paragraphs */
+    font-size: 18px;
+    margin-bottom: 10px;
 }
+
 @media (max-width: 768px) {
     .text-container {
-        max-width: 250px; /* Make the container slightly smaller on mobile */
-        padding: 10px; /* Reduce padding on smaller screens */
+        max-width: 250px;
+        padding: 10px;
     }
 
     .text-container p {
-        font-size: 16px; /* Reduce font size slightly for mobile */
+        font-size: 16px;
     }
 }

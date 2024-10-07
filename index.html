@@ -15,9 +15,7 @@
             <p>I will happily pay you $50 if you return this to me!</p>
             <p>If you leave your phone, email, or other contact method below, I will reach out to you shortly.</p>
         </div>
-        
 
-        <!-- Contact form using Formspree -->
         <form
           action="https://formspree.io/f/mqakzdbg"
           method="POST"
@@ -47,18 +45,16 @@
 
     <script>
         document.querySelector('form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent immediate submission
+            event.preventDefault();
             const form = event.target;
             const submitButton = form.querySelector('button');
 
-            // Show the thank you message and disable the button
             document.getElementById('thank-you-message').style.display = 'block';
             submitButton.disabled = true;
 
-            // Wait 1 second, then submit the form
             setTimeout(() => {
-                form.submit(); // Actually submit the form after showing the message
-            }, 1000); // 1 second delay
+                form.submit();
+            }, 1000);
         });
     </script>
 </body>
